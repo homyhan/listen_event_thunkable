@@ -9,11 +9,9 @@
     <h2>Nhấn phím bất kỳ!</h2>
 
     <script>
-        window.onload = function() {
-      document.body.focus(); // Tự động focus khi mở Web Viewer
-    };
-    document.addEventListener("keydown", function(event) {
-      document.body.innerHTML = "<h2>Bạn đã nhấn phím: " + event.key + "</h2>";
+        document.addEventListener("keydown", function(event) {
+      var key = event.key; // Lấy ký tự vừa nhập
+      window.ReactNativeWebView.postMessage(key); // Gửi về Thunkable
     });
       </script>
 </body>
