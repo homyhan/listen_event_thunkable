@@ -9,9 +9,12 @@
     <h2>Nhấn phím bất kỳ!</h2>
 
     <script>
-        document.addEventListener("keydown", function(event) {
-          document.body.innerHTML = "<h2>Bạn đã nhấn phím: " + event.key + "</h2>";
-        });
+        window.onload = function() {
+      document.body.focus(); // Tự động focus khi mở Web Viewer
+    };
+    document.addEventListener("keydown", function(event) {
+      document.body.innerHTML = "<h2>Bạn đã nhấn phím: " + event.key + "</h2>";
+    });
       </script>
 </body>
 </html>
