@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nhấn phím bất kỳ!</h2>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+          document.body.innerHTML = "<h2>Bạn đã nhấn phím: " + event.key + "</h2>";
+        });
+      </script>
+</body>
+</html>
